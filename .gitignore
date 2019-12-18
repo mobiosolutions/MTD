@@ -10,3 +10,13 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+/.idea
+*.sublime-workspace
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+.vscode/
