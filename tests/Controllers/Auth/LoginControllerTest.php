@@ -8,11 +8,13 @@ use App\User;
 use Tests\DuskTestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use App\Http\Controllers\Auth\LoginController;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class LoginControllerTest extends DuskTestCase
 {
 
     use WithFaker;
+    use DatabaseTransactions;
 
     public $mockUser;
     public $mockValidator;
@@ -114,7 +116,7 @@ class LoginControllerTest extends DuskTestCase
         $this->assertTrue($validate->passes());
     }
 
-      /**
+    /**
      * Check Email id exist in the system.
      *
      * @test

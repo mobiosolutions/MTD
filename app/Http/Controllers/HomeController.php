@@ -30,6 +30,11 @@ class HomeController extends Controller
         return view('home');
     }
 
+    /**
+     * change password.
+     *
+     * @return request
+     */
     public function changePassword(request $request)
     {
 
@@ -52,7 +57,7 @@ class HomeController extends Controller
             $user->password = bcrypt($models['new_password']);
             $user->updated_by = Auth::user()->id;
             $user->updated_at = date('Y-m-d H:i:s');
-            $userId = $user->save();
+            $user->save();
         }  
 
     }
